@@ -8,6 +8,11 @@ class ArgumentIsNotInteger(Exception):
     pass
 
 
+def minus(a, b):
+    if not isinstance(a, int) or not isinstance(b, int):
+        raise ArgumentEqualZeroError("Arguments must be int")
+
+
 def divide_two(a, b):
     if not isinstance(a, int) or not isinstance(b, int):
         raise ArgumentEqualZeroError("Arguments must be int")
