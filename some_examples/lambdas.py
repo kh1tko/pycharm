@@ -31,3 +31,6 @@ if __name__ == '__main__':
     print([a ** 2 for a in ints if a % 2 == 0])
     a_dict = {'a': 3, 'c': 8, 'b': 7, 'd': 1}
     print(sorted(a_dict.items(), key=lambda z: z[0]))
+
+
+

@@ -23,3 +23,5 @@ for index, element in enumerate(integers2, 1):
 
 integers3 = [1, 2, 5, 9]
 print(all(e > 0 for e in integers3))
+
+
