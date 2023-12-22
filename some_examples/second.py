@@ -1,24 +1,21 @@
 """
-8. Задано дані (список списків) про багаж (кількість речей і загальна вага багажу) пасажирів.
-Скласти функцію, яка повертає тапл де міститься:
-а) кількість пасажирів, які мають більше двох речей;
-б) чи є хоч один пасажир, багаж якого складається з однієї речі вагою менше 25 кг;
-в) число пасажирів, кількість речей яких перевершує середнє число речей всіх пасажирів.
+Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in
+descending order. Essentially, rearrange the digits to create the highest possible number.
 
-```python
-[
-    {'number_of_items': 3, 'total_weight': 30},
-    {'number_of_items': 2, 'total_weight': 20},
-    {'number_of_items': 1, 'total_weight': 15},
-    # Додайте дані для ще пасажирів
-]
-```
+Examples:
+Input: 42145 Output: 54421
+
+Input: 145263 Output: 654321
+
+Input: 123456789 Output: 987654321
+
 """
 
 
-def baggage_analyses(total_info):
-    pass
+def descending_order(num):
+    numbers = sorted(str(num), reverse=True)
+    return int(''.join(numbers))
 
 
 if __name__ == '__main__':
-    pass
+    print(descending_order(123))
