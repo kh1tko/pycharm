@@ -43,5 +43,4 @@ if operation_type == "str":
     result = num1 + num2
 elif operation_type == 'int':
     result = (int(num1) + int(num2)) * 3
-
 print("Результат:", result)
