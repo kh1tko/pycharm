@@ -17,7 +17,7 @@ def write_result_file_text(func):
     def wrapper(*args, **kwargs):
         result = func(*args, **kwargs)
         with open('text.txt', 'a') as file:
-            file.write(f'Результат розрахунку: {result}\n')
+            file.write(f'  --->  Result: {result}\n')
         return result
 
     return wrapper
@@ -26,14 +26,12 @@ def write_result_file_text(func):
 @write_result_file_text
 def add_three_numbers(number_1: int | float, number_2: int | float, number_3: int | float) -> int | float:
     result = (number_1 + number_2) * number_3
+    with open('text.txt', 'a') as file:
+        file.write(f'Input numbers: {number_1}, {number_2}, {number_3}')
     return result
 
 
 if __name__ == '__main__':
     print(add_three_numbers(458, 877, 98))
-    print(add_three_numbers(0.3, 34.7, 45.9))
-    print(add_three_numbers(800, 600, 900))
-    print(add_three_numbers(90.0, 6006, 99900))
-    print(add_three_numbers(700, 60509, 9090))
-    print(add_three_numbers(8600, -9600, 9060))
+    print(add_three_numbers(45, 87, 8))
 
