@@ -17,21 +17,12 @@ class Student:
         print(f'Мої оцінки {self.grades}')
 
 
-class StudentTwo:
-    name = 'Aртем'
-    grades = [12, 13, 5, 76, 87, 43, 34]
-
-    def greets_by_name(self):
-        print(f'Привіт! Я студент {self.name}')
-
-    def student_grades(self):
-        print(f'Мої оцінки {self.grades}')
-
-
 obj_1 = Student()
 obj_1.greets_by_name()
 obj_1.student_grades()
+
 print()
-obj_2 = StudentTwo()
+obj_2 = Student()
+obj_2.name = 'Artem'
 obj_2.greets_by_name()
 obj_2.student_grades()
