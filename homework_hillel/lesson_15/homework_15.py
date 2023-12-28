@@ -10,16 +10,16 @@ class Calculator:
     def __init__(self, name):
         self.name = name
 
-    def addition(self, a, b):
+    def addition(self, a: int | float, b: int | float):
         return a + b
 
-    def subtraction(self, a, b):
+    def subtraction(self, a: int | float, b: int | float):
         return a - b
 
-    def multi(self, a, b):
+    def multi(self, a: int | float, b: int | float):
         return a * b
 
-    def division(self, a, b):
+    def division(self, a: int | float, b: int | float):
         if b == 0 or a == 0:
             return 'Не тупи. На ноль не можна ділити)'
         else:
