@@ -1,6 +1,6 @@
 # 1) Напишіть ліст компрехеншин який формує список всіх чисел від 34 до 121 які діляться націло на 3 та на 2
-# divisible_by_3_and_2 = [num for num in range(34, 122) if num % 3 == 0 and num % 2 == 0]
-# print(divisible_by_3_and_2)
+divisible_by_3_and_2 = [num for num in range(34, 122) if num % 3 == 0 and num % 2 == 0]
+print(divisible_by_3_and_2)
 
 
 # 2) Напишіть клас калькулятора де будуть 4 арифметичні дії плюс, мінус, додавання, множення - звичайні методи.
