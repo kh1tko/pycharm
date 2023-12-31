@@ -13,8 +13,8 @@ def logger(func):
 
 
 @logger
-def summ(a, b):
-    return a + b
+def summ(a: int | float, b: int | float, c: int | float):
+    return a + b + c
 
 
 # def example(a):
@@ -31,4 +31,4 @@ if __name__ == '__main__':
 
     # summ = logger(summ)
 
-    print(summ(80, -9))
+    print(summ(80, -9, 8, ))
