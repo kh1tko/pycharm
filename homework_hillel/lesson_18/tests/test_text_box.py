@@ -12,7 +12,6 @@ class TestTextBox:
         page.click_submit()
         name_field = page.get_result_fullname()
         assert name_field.replace('Name:', '') == 'Artem'
-        time.sleep(2)
 
     def test_email_fill_and_check(self, chrome):
         page = TextBoxPage(chrome)
@@ -22,7 +21,6 @@ class TestTextBox:
         page.click_submit()
         result_email = page.get_result_email()
         assert result_email.replace('Email:', '') == "kh11tko@gmail.com"
-        time.sleep(2)
 
     def test_curr_addr_fill_and_check(self, chrome):
         page = TextBoxPage(chrome)
@@ -32,7 +30,6 @@ class TestTextBox:
         page.click_submit()
         result_curr_addr = page.get_result_current_address()
         assert result_curr_addr.replace('Current Address :', '') == 'First avenue'
-        time.sleep(2)
 
     def test_perm_addr_fill_and_check(self, chrome):
         page = TextBoxPage(chrome)
@@ -42,4 +39,3 @@ class TestTextBox:
         page.click_submit()
         result_perm_addr = page.get_result_permanent_address()
         assert result_perm_addr.replace('Permananet Address :', '') == 'Five avenue'
-        time.sleep(2)
