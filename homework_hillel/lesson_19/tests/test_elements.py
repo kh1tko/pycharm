@@ -7,48 +7,23 @@ from pythonProject.homework_hillel.lesson_19.ElementsPage import ElementsPage
 
 class TestElementsPage:
 
-    @pytest.mark.parametrize('expected_element', ['Text Box',
-                                                  'Check Box',
-                                                  'Radio Button',
-                                                  'Web Tables',
-                                                  'Buttons',
-                                                  'Links',
-                                                  'Broken Links - Images',
-                                                  'Upload and Download',
-                                                  'Dynamic Properties',
-                                                  '',
-                                                  '',
-                                                  '',
-                                                  '',
-                                                  '',
-                                                  '',
-                                                  '',
-                                                  '',
-                                                  '',
-                                                  '',
-                                                  '',
-                                                  '',
-                                                  '',
-                                                  '',
-                                                  '',
-                                                  '',
-                                                  '',
-                                                  '',
-                                                  '',
-                                                  '',
-                                                  '',
-                                                  '',
-                                                  '',
-                                                  ''])
-    def test_page(self, chrome, expected_element):
+    def test_page(self, chrome):
         page = ElementsPage(chrome)
         page.open()
         elements = page.get_elements_page_categories()
         assert len(elements) == 33
-        assert expected_element in elements
 
     #  todo перевірити відповіді всіх 33 елементів в елементс
     #  assert elements[2] == "Radio Button"
+    @pytest.mark.parametrize('expected_element',
+                             ['Text Box', 'Check Box', 'Radio Button', 'Web Tables', 'Buttons', 'Links',
+                              'Broken Links - Images', 'Upload and Download', 'Dynamic Properties', '', '', '', '', '',
+                              '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''])
+    def test_page(self, chrome, expected_element):
+        page = ElementsPage(chrome)
+        page.open()
+        elements = page.get_elements_page_categories()
+        assert expected_element in elements
 
     def test_is_button_enabled(self, chrome):
         page = PageDynamicProperties(chrome)
