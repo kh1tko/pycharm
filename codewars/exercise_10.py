@@ -57,5 +57,22 @@ def compare_versions(version1, version2):
     return True
 
 
+def find_needle(haystack):
+    index = 0
+    for i in haystack:
+        index += 1
+        if i == 'needle':
+            return f'found the needle at position {index - 1}'
+
+
+def get_count(sentence):
+    vowels = 'aeiouAEIOU'
+    count = 0
+    for i in sentence:
+        if i in vowels:
+            count += 1
+    return count
+
+
 if __name__ == '__main__':
-    print(compare_versions('10.4.6', '10.5'))
+    print(get_count('aeiou'))
