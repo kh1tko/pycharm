@@ -37,7 +37,7 @@ if __name__ == '__main__':
 
     print(f'Результат додавання: {calc.addition(32, 43)}')
 
-    print(f'Результат ділення: {calc.division(9, 0)}')
+    print(f'Результат ділення: {calc.division(9, 3)}')
 
     print(f'Результат віднімання: {calc.subtraction(3, 2)}')
 
