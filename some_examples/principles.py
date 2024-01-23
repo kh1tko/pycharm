@@ -16,7 +16,11 @@ def two():
     return read_from_file('test2.txt')
 
 
-def read_from_file(name):
-    with open(name) as file:
-        result = file.readlines()
-    return result
+def read_from_file(name):   # eafp
+    try:
+        with open(name) as file:
+            result = file.readlines()
+        return result
+    except FileNotFoundError:
+        pass
+        # sorry))
