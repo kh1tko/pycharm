@@ -4,5 +4,13 @@ def create_phone_number(n: list):
     return f'({new_string[:3]}) {new_string[3:6]}-{new_string[6:]}'
 
 
+def sum_array(arr: list):
+    if arr is None or len(arr) <= 1:
+        return 0
+    new_list = sorted(arr)
+    return sum(new_list[1:-1])
+
+
 if __name__ == '__main__':
-    print(create_phone_number([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]))
+    print(sum_array([6, 2, 1, 8, 10]))
+    print(sum_array([None]))
