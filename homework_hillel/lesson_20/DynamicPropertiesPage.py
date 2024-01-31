@@ -10,7 +10,6 @@ class PageDynamicProperties:
         self.invisible_visible_button = "visibleAfter"
         self.disable_enable_button = (By.ID, "enableAfter")
 
-
     def open(self):
         self.driver.get(self.url)
         return self

@@ -1,5 +1,4 @@
 from pythonProject.homework_hillel.lesson_18.TextBoxPage import TextBoxPage
-import time
 
 
 class TestTextBox:
