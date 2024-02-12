@@ -20,3 +20,27 @@ def convert_lambda_to_def(string):
 print(convert_lambda_to_def("func = lambda a: a * 1"))
 
 
+def find_it(seq):
+    for i in seq:
+        if seq.count(i) % 2 != 0:
+            return i
+
+
+
+
+# take the initial cell population as input
+cells = int(input())
+
+# take the number of days as input
+days = int(input())
+
+# initialize the day counter
+counter = 1
+
+# complete the while loop
+while days > 0:
+    # Daily message
+    print("Day " + str(counter) + ": " + str(cells * 2))
+    counter += 1
+    days -= 1
+    cells = cells * 2
