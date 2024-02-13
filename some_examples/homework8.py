@@ -8,9 +8,9 @@
 Мінімум на 10 балів - 1 правильно задизайнений позитивний тест на функцію.
 """
 import unittest
-from pythonProject.some_examples.test_functions import my_substr
-from pythonProject.some_examples.test_functions import sum_of_two_numbers
-from pythonProject.some_examples.test_functions import square_of_even_numbers
+from pythonProject.api.src.enums import my_substr
+from pythonProject.api.src.enums import sum_of_two_numbers
+from pythonProject.api.src.enums import square_of_even_numbers
 
 
 class TestMySubstr(unittest.TestCase):
