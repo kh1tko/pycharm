@@ -1,4 +1,5 @@
 from collections import deque
+import random
 
 
 class Node:
@@ -28,13 +29,19 @@ class LinkedList:
             current = current.next
         current.next = Node(data)
 
+    def search(self, target):
+        current = self.head
+        while current.next:
+            if current.data == target:
+                return True
+            else:
+                current = current.next
+        return False
+
 
 a_list = LinkedList()
-a_list.append('Monday')
-a_list.append('Wednesday')
-print(a_list)
-d = deque()
-d.append('Harry')
-d.append('Potter')
-for item in d:
-    print(item)
+for i in range(0, 101):
+    j = random.randint(1, 100)
+    a_list.append(j)
+    print(j, end=" ")
+print(a_list.search(1))
