@@ -42,4 +42,20 @@ def downsizing(a_string):
     print(' '.join(new_list))
 
 
-downsizing("I am a self-taught programmer looking for a job as a programmer")
+# downsizing("I am a self-taught programmer looking for a job as a programmer")
+
+
+def spin_words(sentence):
+    a_list = sentence.split()
+    b_list = []
+    for i in a_list:
+        if len(i) >= 5:
+            k = i[::-1]
+            b_list.append(k)
+
+        else:
+            b_list.append(i)
+    return ' '.join(b_list)
+
+
+print(spin_words("Hey fellow warriors"))
