@@ -1,5 +1,2 @@
-def dna_to_rna(dna):
-    a = dna.replace('T', 'U')
-    return a
-
-print(dna_to_rna('GCAT'))
+def reverse_and_mirror(s1, s2):
+    return f"{s2.swapcase()[::-1]}@@@{s1.swapcase()[::-1]}{s1.swapcase()}"
