@@ -10,3 +10,5 @@ print(is_leap(1986))
 print(is_leap(2024))
 print(is_leap(1991))
 print(is_leap(2077))
+
+print(True + True)
