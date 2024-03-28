@@ -24,5 +24,6 @@ periods = re.findall(r'\d{4}-\d{4}', text)
 result = re.sub(r'\bEUR\b', 'USD', info)
 words = re.split(r'\W+', text_two)
 
-
 print(words)
+print(periods)
+print(result)
